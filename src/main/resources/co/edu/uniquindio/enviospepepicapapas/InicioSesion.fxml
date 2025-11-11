@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="co.edu.uniquindio.enviospepepicapapas.Controllers.InicioSesionController"
+      prefHeight="400.0" prefWidth="600.0"
+      spacing="20.0"
+      alignment="CENTER">
+
+    <children>
+        <Label text="Inicio de Sesión" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+        <VBox spacing="10.0" alignment="CENTER_LEFT">
+            <Label text="Tipo de Usuario:" />
+            <ComboBox fx:id="tipoUsuarioComboBox" prefWidth="200.0">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Cliente" />
+                        <String fx:value="Repartidor" />
+                        <String fx:value="Administrador" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+        </VBox>
+
+        <VBox spacing="10.0" alignment="CENTER_LEFT">
+            <Label text="Correo:" />
+            <TextField fx:id="correoTextField" prefWidth="200.0" promptText="Ingrese su correo" />
+        </VBox>
+
+        <VBox spacing="10.0" alignment="CENTER_LEFT">
+            <Label text="Contraseña:" />
+            <PasswordField fx:id="contrasenaPasswordField" prefWidth="200.0" promptText="Ingrese su contraseña" />
+        </VBox>
+
+        <Button fx:id="iniciarSesionButton" text="Iniciar Sesión" onAction="#iniciarSesion" prefWidth="150.0" />
+
+        <Label fx:id="mensajeLabel" text="" style="-fx-text-fill: red;" />
+    </children>
+</VBox>
