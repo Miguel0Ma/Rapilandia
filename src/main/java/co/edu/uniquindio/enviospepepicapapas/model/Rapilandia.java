@@ -41,6 +41,13 @@ public class Rapilandia {
 
         return envio;
     }
+    public void eliminarEnvio(Envio envio) {
+        historial.eliminarEnvio(envio);
+    }
+
+    public void actualizarEnvio(Envio envio) {
+        historial.actualizarEnvio(int idEnvio,String origen, double peso, Dimension dimension,Usuario repartidor);
+    }
 
     //  Procesar pago
     public boolean procesarPago(Envio envio, MetodoPago metodoPago) {

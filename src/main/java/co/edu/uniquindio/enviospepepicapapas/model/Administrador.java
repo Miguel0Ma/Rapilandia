@@ -1,8 +1,12 @@
 package co.edu.uniquindio.enviospepepicapapas.model;
 
+import java.util.ArrayList;
+
 public class Administrador extends Usuario {
     private String tipo;
     private String password;
+    private ArrayList<Usuario> usuarios;
+    private ArrayList<Repartidor> repartidores;
 
     private Administrador(Builder builder) {
         setNombre(builder.nombre);
