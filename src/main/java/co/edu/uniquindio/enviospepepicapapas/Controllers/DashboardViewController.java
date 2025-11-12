@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 
 import java.io.IOException;
@@ -15,8 +16,47 @@ public class DashboardViewController {
     private BorderPane contentPane;
 
     @FXML
+    private Button btnRegistrarEnvio;
+
+    @FXML
+    private Button btnHistorial;
+
+    @FXML
+    private Button btnPagos;
+
+    @FXML
+    private Button btnUsuarios;
+
+    @FXML
+    private Button btnNotificaciones;
+
+    @FXML
     public void initialize() {
         System.out.println("DashboardViewController inicializado correctamente");
+    }
+
+    public void setTipoUsuario(String tipoUsuario) {
+        switch (tipoUsuario) {
+            case "Repartidor":
+                // Repartidor puede ver: Historial de Envíos y Notificaciones
+                btnRegistrarEnvio.setVisible(false);
+                btnPagos.setVisible(false);
+                btnUsuarios.setVisible(false);
+                break;
+            case "Cliente":
+                // Cliente puede ver: Registrar Envío, Historial de Envíos y Gestión de Pagos
+                btnUsuarios.setVisible(false);
+                btnNotificaciones.setVisible(false);
+                break;
+            case "Administrador":
+                // Administrador ve todo
+                break;
+            default:
+                // Por defecto, oculta funcionalidades administrativas
+                btnUsuarios.setVisible(false);
+                btnNotificaciones.setVisible(false);
+                break;
+        }
     }
 
     @FXML

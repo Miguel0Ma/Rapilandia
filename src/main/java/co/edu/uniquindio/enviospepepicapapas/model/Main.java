@@ -12,7 +12,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/enviospepepicapapas/DashboardView.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/co/edu/uniquindio/enviospepepicapapas/InicioSesion.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1000, 700);
             stage.setTitle("Rapilandia Express - Dashboard");
             stage.setScene(scene);
