@@ -8,50 +8,117 @@
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="co.edu.uniquindio.enviospepepicapapas.Controllers.DashboardViewController"
-            prefHeight="700.0" prefWidth="1000.0"
-            style="-fx-background-color: #000000;">
+            prefHeight="700.0" prefWidth="1200.0"
+            stylesheets="@Style/styledashboard.css"
+            styleClass="dashboard-container">
 
     <!-- Header -->
     <top>
-        <HBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #FFD700; -fx-padding: 20;">
-            <Label text="RAPILANDIA EXPRESS - DASHBOARD" style="-fx-text-fill: #000000; -fx-font-weight: bold;">
-                <font>
-                    <Font name="System Bold" size="28.0"/>
-                </font>
-            </Label>
+        <HBox alignment="CENTER_LEFT" spacing="20.0"
+              style="-fx-background-color: white; -fx-padding: 20 30; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+            <Label text="🚚" style="-fx-font-size: 32px;"/>
+            <VBox spacing="2">
+                <Label text="Envíos Pepe Pica Papas" styleClass="title-secondary" style="-fx-text-fill: #FF441F;"/>
+                <Label text="Panel de Administración" styleClass="text-secondary" style="-fx-font-size: 13px;"/>
+            </VBox>
+
+            <!-- Spacer -->
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <!-- User info -->
+            <HBox spacing="10" alignment="CENTER_RIGHT">
+                <VBox alignment="CENTER_RIGHT" spacing="2">
+                    <Label text="Admin" styleClass="form-label"/>
+                    <Label text="admin@pepepicapapas.com" styleClass="text-small"/>
+                </VBox>
+                <Button text="👤" styleClass="btn-icon"
+                        style="-fx-font-size: 18px; -fx-min-width: 45px; -fx-min-height: 45px;"/>
+            </HBox>
         </HBox>
     </top>
 
     <!-- Left Sidebar -->
     <left>
-        <VBox spacing="15.0" style="-fx-background-color: #1A1A1A; -fx-padding: 20; -fx-pref-width: 200;">
-            <Label text="NAVEGACIÓN" style="-fx-text-fill: #FFD700; -fx-font-weight: bold; -fx-font-size: 16px;"/>
+        <VBox spacing="10.0"
+              style="-fx-background-color: #FF441F; -fx-padding: 30 20; -fx-pref-width: 260;">
 
-            <Button fx:id="btnRegistrarEnvio" text="📦 Registrar Envío" prefWidth="180.0" prefHeight="40.0" onAction="#onRegistrarEnvio"
-                    style="-fx-background-color: #FFD700; -fx-text-fill: #000000; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+            <Label text="MENÚ PRINCIPAL"
+                   style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px; -fx-padding: 0 10 10 10;"/>
 
-            <Button fx:id="btnHistorial" text="📋 Historial de Envíos" prefWidth="180.0" prefHeight="40.0" onAction="#onHistorialEnvios"
-                    style="-fx-background-color: #FFD700; -fx-text-fill: #000000; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+            <VBox spacing="8">
+                <Button fx:id="btnRegistrarEnvio" text="📦  Registrar Envío"
+                        prefWidth="220.0" prefHeight="50.0" onAction="#onRegistrarEnvio"
+                        style="-fx-background-color: rgba(255,255,255,0.2); -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: 600; -fx-background-radius: 12; -fx-alignment: CENTER-LEFT; -fx-padding: 0 20;"/>
 
-            <Button fx:id="btnPagos" text="💳 Gestión de Pagos" prefWidth="180.0" prefHeight="40.0" onAction="#onGestionPagos"
-                    style="-fx-background-color: #FFD700; -fx-text-fill: #000000; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+                <Button fx:id="btnHistorial" text="📋  Historial de Envíos"
+                        prefWidth="220.0" prefHeight="50.0" onAction="#onHistorialEnvios"
+                        style="-fx-background-color: rgba(255,255,255,0.2); -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: 600; -fx-background-radius: 12; -fx-alignment: CENTER-LEFT; -fx-padding: 0 20;"/>
 
-            <Button fx:id="btnUsuarios" text="👥 Gestión de Usuarios" prefWidth="180.0" prefHeight="40.0" onAction="#onGestionUsuarios"
-                    style="-fx-background-color: #FFD700; -fx-text-fill: #000000; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+                <Button fx:id="btnPagos" text="💳  Gestión de Pagos"
+                        prefWidth="220.0" prefHeight="50.0" onAction="#onGestionPagos"
+                        style="-fx-background-color: rgba(255,255,255,0.2); -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: 600; -fx-background-radius: 12; -fx-alignment: CENTER-LEFT; -fx-padding: 0 20;"/>
 
-            <Button fx:id="btnNotificaciones" text="📢 Notificaciones" prefWidth="180.0" prefHeight="40.0" onAction="#onNotificaciones"
-                    style="-fx-background-color: #FFD700; -fx-text-fill: #000000; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 10;"/>
+                <Button fx:id="btnUsuarios" text="👥  Gestión de Usuarios"
+                        prefWidth="220.0" prefHeight="50.0" onAction="#onGestionUsuarios"
+                        style="-fx-background-color: rgba(255,255,255,0.2); -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: 600; -fx-background-radius: 12; -fx-alignment: CENTER-LEFT; -fx-padding: 0 20;"/>
+
+                <Button fx:id="btnNotificaciones" text="📢  Notificaciones"
+                        prefWidth="220.0" prefHeight="50.0" onAction="#onNotificaciones"
+                        style="-fx-background-color: rgba(255,255,255,0.2); -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: 600; -fx-background-radius: 12; -fx-alignment: CENTER-LEFT; -fx-padding: 0 20;"/>
+            </VBox>
+
+            <!-- Spacer -->
+            <Region VBox.vgrow="ALWAYS"/>
+
+            <!-- Logout button at bottom -->
+            <Button text="🚪  Cerrar Sesión"
+                    prefWidth="220.0" prefHeight="50.0"
+                    style="-fx-background-color: rgba(255,255,255,0.15); -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: 600; -fx-background-radius: 12; -fx-alignment: CENTER-LEFT; -fx-padding: 0 20; -fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 12;"/>
         </VBox>
     </left>
 
     <!-- Center Content Area -->
     <center>
-        <BorderPane fx:id="contentPane" style="-fx-background-color: #000000;">
+        <BorderPane fx:id="contentPane"
+                    style="-fx-background-color: #F8F8F8; -fx-padding: 30;">
             <!-- Default welcome content -->
             <center>
-                <VBox alignment="CENTER" spacing="20.0">
-                    <Label text="Bienvenido al Dashboard de Rapilandia Express" style="-fx-text-fill: #FFD700; -fx-font-size: 24px; -fx-font-weight: bold;"/>
-                    <Label text="Selecciona una opción del menú lateral para comenzar" style="-fx-text-fill: #FFD700; -fx-font-size: 16px;"/>
+                <VBox alignment="CENTER" spacing="30.0" maxWidth="600">
+                    <VBox alignment="CENTER" spacing="15">
+                        <Label text="🎯" style="-fx-font-size: 80px;"/>
+                        <Label text="Bienvenido al Dashboard"
+                               styleClass="title-primary"
+                               style="-fx-text-fill: #333333;"/>
+                        <Label text="Selecciona una opción del menú lateral para comenzar a gestionar tus envíos"
+                               styleClass="text-secondary"
+                               textAlignment="CENTER"
+                               wrapText="true"
+                               style="-fx-font-size: 16px;"/>
+                    </VBox>
+
+                    <!-- Quick stats cards -->
+                    <HBox spacing="20" alignment="CENTER">
+                        <VBox spacing="10" alignment="CENTER"
+                              style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 25; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 15, 0, 0, 3); -fx-pref-width: 160;">
+                            <Label text="📦" style="-fx-font-size: 35px;"/>
+                            <Label text="128" styleClass="title-secondary" style="-fx-text-fill: #FF441F;"/>
+                            <Label text="Envíos Activos" styleClass="text-small"/>
+                        </VBox>
+
+                        <VBox spacing="10" alignment="CENTER"
+                              style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 25; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 15, 0, 0, 3); -fx-pref-width: 160;">
+                            <Label text="✅" style="-fx-font-size: 35px;"/>
+                            <Label text="452" styleClass="title-secondary" style="-fx-text-fill: #00D632;"/>
+                            <Label text="Completados" styleClass="text-small"/>
+                        </VBox>
+
+                        <VBox spacing="10" alignment="CENTER"
+                              style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 25; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 15, 0, 0, 3); -fx-pref-width: 160;">
+                            <Label text="👥" style="-fx-font-size: 35px;"/>
+                            <Label text="89" styleClass="title-secondary" style="-fx-text-fill: #4A90E2;"/>
+                            <Label text="Usuarios" styleClass="text-small"/>
+                        </VBox>
+                    </HBox>
                 </VBox>
             </center>
         </BorderPane>
@@ -59,18 +126,13 @@
 
     <!-- Footer -->
     <bottom>
-        <HBox alignment="CENTER" spacing="10.0" style="-fx-background-color: #1A1A1A; -fx-padding: 15;">
-            <Label text="© 2024 Rapilandia Express" style="-fx-text-fill: #FFD700;">
-                <font>
-                    <Font size="12.0"/>
-                </font>
-            </Label>
-            <Separator orientation="VERTICAL" prefHeight="20.0"/>
-            <Label text="Dashboard v1.0" style="-fx-text-fill: #FFD700;">
-                <font>
-                    <Font size="12.0"/>
-                </font>
-            </Label>
+        <HBox alignment="CENTER" spacing="15.0"
+              style="-fx-background-color: white; -fx-padding: 15; -fx-border-color: #E0E0E0; -fx-border-width: 1 0 0 0;">
+            <Label text="© 2024 Envíos Pepe Pica Papas" styleClass="text-small" style="-fx-text-fill: #666666;"/>
+            <Separator orientation="VERTICAL" prefHeight="15.0"/>
+            <Label text="Dashboard v1.0" styleClass="text-small" style="-fx-text-fill: #666666;"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label text="Hecho con ❤️ en Colombia" styleClass="text-small" style="-fx-text-fill: #666666;"/>
         </HBox>
     </bottom>
 

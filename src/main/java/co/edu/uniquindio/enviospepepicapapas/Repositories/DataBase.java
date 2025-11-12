@@ -33,11 +33,11 @@ public class DataBase {
     }
     public void CargarDatos(){
         repartidores = new ArrayList<>();
-        repartidores.add(new Repartidor.Builder().nombre("Yulbreiner").email("Yul@gmail.com").password("123").tipo("Repartidor").build());
+        repartidores.add(new Repartidor.Builder().nombre("Yulbreiner").email("yul@gmail.com").password("123").tipo("Repartidor").build());
         administradores = new ArrayList<>();
-        administradores.add(new Administrador.Builder().nombre("Yulbreiner").email("Yul@gmail.com").password("143").tipo("Administrador").build());
+        administradores.add(new Administrador.Builder().nombre("Yulbreiner").email("yul@gmail.com").password("123").tipo("Administrador").build());
         clientes = new ArrayList<>();
-        clientes.add(new Cliente.Builder().email("Yul@gmail.com").password("125").tipo("Cliente").build());
+        clientes.add(new Cliente.Builder().email("yul@gmail.com").password("123").tipo("Cliente").build());
 
 
     }
