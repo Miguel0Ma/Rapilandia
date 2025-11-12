@@ -74,6 +74,10 @@
                                promptText="••••••••" />
             </VBox>
 
+
+
+
+
             <!-- Espaciador -->
             <Region minHeight="30"/>
 
