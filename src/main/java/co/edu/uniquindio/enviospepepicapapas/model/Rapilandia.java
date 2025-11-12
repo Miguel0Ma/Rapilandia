@@ -41,12 +41,12 @@ public class Rapilandia {
 
         return envio;
     }
-    public void eliminarEnvio(Envio envio) {
+    public void cancelarEnvio(Envio envio) {
         historial.eliminarEnvio(envio);
     }
 
-    public void actualizarEnvio(Envio envio) {
-        historial.actualizarEnvio(int idEnvio,String origen, double peso, Dimension dimension,Usuario repartidor);
+    public void modificarEnvio(int idEnvio, String origen, double peso, Dimension dimension, Usuario repartidor) {
+        historial.actualizarEnvio(idEnvio, origen, peso, dimension, repartidor);
     }
 
     //  Procesar pago
