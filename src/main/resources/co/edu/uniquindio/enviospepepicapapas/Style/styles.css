@@ -1,0 +1,686 @@
+/* ==========================================
+   ESTILOS UNIVERSALES - ENVÍOS PEPE PICA PAPAS
+   Inspirado en Rappi
+   ========================================== */
+
+/* ==========================================
+   VARIABLES DE COLOR (Usando -fx-base como referencia)
+   ========================================== */
+.root {
+    /* Colores principales */
+    -primary-color: #FF441F;
+    -primary-dark: #E63900;
+    -primary-light: #FF6B4A;
+
+    /* Colores secundarios */
+    -secondary-color: #FFD814;
+    -accent-color: #00D632;
+
+    /* Colores de fondo */
+    -background-primary: #FFFFFF;
+    -background-secondary: #F8F8F8;
+    -background-tertiary: #F0F0F0;
+    -background-dark: #1A1A1A;
+
+    /* Colores de texto */
+    -text-primary: #333333;
+    -text-secondary: #666666;
+    -text-tertiary: #999999;
+    -text-white: #FFFFFF;
+
+    /* Colores de estado */
+    -success-color: #00D632;
+    -warning-color: #FFD814;
+    -error-color: #FF441F;
+    -info-color: #4A90E2;
+
+    /* Sombras */
+    -shadow-light: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+    -shadow-medium: dropshadow(gaussian, rgba(0,0,0,0.15), 15, 0, 0, 4);
+    -shadow-strong: dropshadow(gaussian, rgba(0,0,0,0.2), 20, 0, 0, 5);
+
+    /* Bordes redondeados */
+    -radius-small: 8px;
+    -radius-medium: 12px;
+    -radius-large: 20px;
+    -radius-round: 50%;
+
+    /* Espaciado */
+    -spacing-xs: 5px;
+    -spacing-sm: 10px;
+    -spacing-md: 20px;
+    -spacing-lg: 30px;
+    -spacing-xl: 40px;
+}
+
+/* ==========================================
+   CONTENEDORES Y LAYOUTS
+   ========================================== */
+
+/* Fondo principal de la aplicación */
+.main-background {
+    -fx-background-color: -primary-color;
+}
+
+/* Tarjeta blanca central */
+.card-container {
+    -fx-background-color: -background-primary;
+    -fx-background-radius: -radius-large;
+    -fx-effect: -shadow-strong;
+    -fx-padding: 40px;
+}
+
+/* Contenedor del dashboard */
+.dashboard-container {
+    -fx-background-color: -background-secondary;
+    -fx-padding: 20px;
+}
+
+/* Panel lateral */
+.sidebar {
+    -fx-background-color: -background-dark;
+    -fx-padding: 20px;
+    -fx-spacing: 15px;
+}
+
+/* Panel de contenido */
+.content-panel {
+    -fx-background-color: -background-primary;
+    -fx-background-radius: -radius-medium;
+    -fx-padding: 30px;
+    -fx-effect: -shadow-light;
+}
+
+/* ==========================================
+   BOTONES
+   ========================================== */
+
+/* Botón principal (estilo Rappi) */
+.btn-primary {
+    -fx-background-color: -primary-color;
+    -fx-text-fill: -text-white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: -radius-medium;
+    -fx-cursor: hand;
+    -fx-padding: 15px 30px;
+    -fx-min-height: 50px;
+}
+
+.btn-primary:hover {
+    -fx-background-color: -primary-dark;
+    -fx-effect: -shadow-medium;
+}
+
+.btn-primary:pressed {
+    -fx-background-color: -primary-dark;
+    -fx-scale-y: 0.98;
+    -fx-scale-x: 0.98;
+}
+
+.btn-primary:disabled {
+    -fx-background-color: -background-tertiary;
+    -fx-text-fill: -text-tertiary;
+    -fx-opacity: 0.6;
+}
+
+/* Botón secundario */
+.btn-secondary {
+    -fx-background-color: -background-secondary;
+    -fx-text-fill: -text-primary;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: -radius-medium;
+    -fx-cursor: hand;
+    -fx-padding: 15px 30px;
+    -fx-border-color: -primary-color;
+    -fx-border-width: 2px;
+    -fx-border-radius: -radius-medium;
+    -fx-min-height: 50px;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: -background-tertiary;
+}
+
+/* Botón de éxito */
+.btn-success {
+    -fx-background-color: -success-color;
+    -fx-text-fill: -text-white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: -radius-medium;
+    -fx-cursor: hand;
+    -fx-padding: 15px 30px;
+}
+
+.btn-success:hover {
+    -fx-background-color: derive(-success-color, -10%);
+}
+
+/* Botón de advertencia */
+.btn-warning {
+    -fx-background-color: -warning-color;
+    -fx-text-fill: -text-primary;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: -radius-medium;
+    -fx-cursor: hand;
+    -fx-padding: 15px 30px;
+}
+
+/* Botón de peligro */
+.btn-danger {
+    -fx-background-color: -error-color;
+    -fx-text-fill: -text-white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: -radius-medium;
+    -fx-cursor: hand;
+    -fx-padding: 15px 30px;
+}
+
+/* Botón pequeño */
+.btn-small {
+    -fx-font-size: 14px;
+    -fx-padding: 8px 20px;
+    -fx-min-height: 35px;
+}
+
+/* Botón de icono redondo */
+.btn-icon {
+    -fx-background-color: -background-secondary;
+    -fx-background-radius: -radius-round;
+    -fx-padding: 10px;
+    -fx-cursor: hand;
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+}
+
+.btn-icon:hover {
+    -fx-background-color: -background-tertiary;
+    -fx-effect: -shadow-light;
+}
+
+/* ==========================================
+   CAMPOS DE TEXTO
+   ========================================== */
+
+.text-field, .password-field, .text-area {
+    -fx-background-color: -background-secondary;
+    -fx-background-radius: -radius-medium;
+    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+    -fx-padding: 0 15px;
+    -fx-min-height: 50px;
+    -fx-text-fill: -text-primary;
+}
+
+.text-field:focused, .password-field:focused, .text-area:focused {
+    -fx-border-color: -primary-color;
+    -fx-border-width: 2px;
+    -fx-border-radius: -radius-medium;
+    -fx-background-color: -background-primary;
+}
+
+.text-field:disabled, .password-field:disabled, .text-area:disabled {
+    -fx-opacity: 0.6;
+}
+
+/* Placeholder text */
+.text-field .prompt-text,
+.password-field .prompt-text,
+.text-area .prompt-text {
+    -fx-fill: -text-tertiary;
+}
+
+/* ==========================================
+   COMBOBOX Y CHOICE BOX
+   ========================================== */
+
+.combo-box, .choice-box {
+    -fx-background-color: -background-secondary;
+    -fx-background-radius: -radius-medium;
+    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+    -fx-min-height: 50px;
+}
+
+.combo-box:focused, .choice-box:focused {
+    -fx-border-color: -primary-color;
+    -fx-border-width: 2px;
+    -fx-border-radius: -radius-medium;
+}
+
+.combo-box .list-cell, .choice-box .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: -text-primary;
+    -fx-padding: 10px;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: -background-primary;
+    -fx-background-radius: -radius-medium;
+    -fx-effect: -shadow-medium;
+}
+
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: -background-secondary;
+}
+
+.combo-box-popup .list-view .list-cell:selected {
+    -fx-background-color: -primary-light;
+    -fx-text-fill: -text-white;
+}
+
+/* ==========================================
+   LABELS Y TEXTOS
+   ========================================== */
+
+.label {
+    -fx-text-fill: -text-primary;
+    -fx-font-size: 14px;
+}
+
+/* Título principal */
+.title-primary {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -text-primary;
+}
+
+/* Título secundario */
+.title-secondary {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -text-primary;
+}
+
+/* Título de sección */
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -text-primary;
+}
+
+/* Etiqueta de formulario */
+.form-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-text-fill: -text-primary;
+}
+
+/* Texto secundario */
+.text-secondary {
+    -fx-text-fill: -text-secondary;
+    -fx-font-size: 14px;
+}
+
+/* Texto pequeño */
+.text-small {
+    -fx-font-size: 12px;
+    -fx-text-fill: -text-tertiary;
+}
+
+/* Texto de error */
+.text-error {
+    -fx-text-fill: -error-color;
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+}
+
+/* Texto de éxito */
+.text-success {
+    -fx-text-fill: -success-color;
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+}
+
+/* Link */
+.link {
+    -fx-text-fill: -primary-color;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-underline: true;
+}
+
+.link:hover {
+    -fx-text-fill: -primary-dark;
+}
+
+/* ==========================================
+   TABLAS
+   ========================================== */
+
+.table-view {
+    -fx-background-color: -background-primary;
+    -fx-background-radius: -radius-medium;
+    -fx-border-color: transparent;
+}
+
+.table-view .column-header {
+    -fx-background-color: -background-secondary;
+    -fx-font-weight: bold;
+    -fx-text-fill: -text-primary;
+    -fx-padding: 15px;
+}
+
+.table-view .table-cell {
+    -fx-border-color: transparent;
+    -fx-padding: 15px;
+    -fx-text-fill: -text-primary;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: -background-secondary;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: -primary-light;
+    -fx-text-fill: -text-white;
+}
+
+/* ==========================================
+   LISTAS
+   ========================================== */
+
+.list-view {
+    -fx-background-color: -background-primary;
+    -fx-background-radius: -radius-medium;
+    -fx-border-color: transparent;
+}
+
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: -text-primary;
+    -fx-padding: 15px;
+}
+
+.list-cell:hover {
+    -fx-background-color: -background-secondary;
+    -fx-cursor: hand;
+}
+
+.list-cell:selected {
+    -fx-background-color: -primary-color;
+    -fx-text-fill: -text-white;
+}
+
+/* ==========================================
+   CHECKBOX Y RADIO BUTTONS
+   ========================================== */
+
+.check-box, .radio-button {
+    -fx-text-fill: -text-primary;
+    -fx-font-size: 14px;
+}
+
+.check-box .box, .radio-button .radio {
+    -fx-background-color: -background-secondary;
+    -fx-border-color: -text-tertiary;
+    -fx-border-width: 2px;
+}
+
+.check-box:selected .box, .radio-button:selected .radio {
+    -fx-background-color: -primary-color;
+    -fx-border-color: -primary-color;
+}
+
+/* ==========================================
+   PROGRESS BAR Y INDICATORS
+   ========================================== */
+
+.progress-bar .track {
+    -fx-background-color: -background-secondary;
+    -fx-background-radius: 10px;
+}
+
+.progress-bar .bar {
+    -fx-background-color: -primary-color;
+    -fx-background-radius: 10px;
+}
+
+.progress-indicator .percentage {
+    -fx-fill: -text-primary;
+}
+
+/* ==========================================
+   SCROLLBAR
+   ========================================== */
+
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: -text-tertiary;
+    -fx-background-radius: 10px;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: -text-secondary;
+}
+
+.scroll-bar .track {
+    -fx-background-color: transparent;
+}
+
+/* ==========================================
+   TABS
+   ========================================== */
+
+.tab-pane {
+    -fx-background-color: -background-primary;
+    -fx-border-color: transparent;
+}
+
+.tab {
+    -fx-background-color: -background-secondary;
+    -fx-background-radius: -radius-medium -radius-medium 0 0;
+    -fx-padding: 15px 30px;
+}
+
+.tab:selected {
+    -fx-background-color: -primary-color;
+}
+
+.tab .tab-label {
+    -fx-text-fill: -text-primary;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label {
+    -fx-text-fill: -text-white;
+}
+
+/* ==========================================
+   TOOLTIPS
+   ========================================== */
+
+.tooltip {
+    -fx-background-color: -background-dark;
+    -fx-text-fill: -text-white;
+    -fx-background-radius: -radius-small;
+    -fx-padding: 8px 12px;
+    -fx-font-size: 12px;
+    -fx-effect: -shadow-medium;
+}
+
+/* ==========================================
+   MENU Y MENU BAR
+   ========================================== */
+
+.menu-bar {
+    -fx-background-color: -background-primary;
+    -fx-padding: 10px;
+}
+
+.menu-item {
+    -fx-padding: 12px 20px;
+}
+
+.menu-item:hover {
+    -fx-background-color: -background-secondary;
+}
+
+.context-menu {
+    -fx-background-color: -background-primary;
+    -fx-background-radius: -radius-medium;
+    -fx-effect: -shadow-strong;
+}
+
+/* ==========================================
+   SEPARADORES
+   ========================================== */
+
+.separator {
+    -fx-background-color: -background-tertiary;
+}
+
+/* ==========================================
+   ALERTAS Y NOTIFICACIONES
+   ========================================== */
+
+.alert-box {
+    -fx-background-color: -background-primary;
+    -fx-background-radius: -radius-medium;
+    -fx-padding: 20px;
+    -fx-effect: -shadow-medium;
+}
+
+.alert-success {
+    -fx-border-color: -success-color;
+    -fx-border-width: 2px;
+    -fx-border-radius: -radius-medium;
+}
+
+.alert-warning {
+    -fx-border-color: -warning-color;
+    -fx-border-width: 2px;
+    -fx-border-radius: -radius-medium;
+}
+
+.alert-error {
+    -fx-border-color: -error-color;
+    -fx-border-width: 2px;
+    -fx-border-radius: -radius-medium;
+}
+
+.alert-info {
+    -fx-border-color: -info-color;
+    -fx-border-width: 2px;
+    -fx-border-radius: -radius-medium;
+}
+
+/* ==========================================
+   BADGES Y CHIPS
+   ========================================== */
+
+.badge {
+    -fx-background-color: -primary-color;
+    -fx-text-fill: -text-white;
+    -fx-background-radius: 20px;
+    -fx-padding: 5px 15px;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.badge-success {
+    -fx-background-color: -success-color;
+}
+
+.badge-warning {
+    -fx-background-color: -warning-color;
+    -fx-text-fill: -text-primary;
+}
+
+.badge-error {
+    -fx-background-color: -error-color;
+}
+
+/* ==========================================
+   CARDS
+   ========================================== */
+
+.card {
+    -fx-background-color: -background-primary;
+    -fx-background-radius: -radius-medium;
+    -fx-padding: 20px;
+    -fx-effect: -shadow-light;
+}
+
+.card:hover {
+    -fx-effect: -shadow-medium;
+    -fx-cursor: hand;
+}
+
+.card-header {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -text-primary;
+    -fx-padding: 0 0 15px 0;
+}
+
+.card-body {
+    -fx-padding: 15px 0;
+}
+
+.card-footer {
+    -fx-padding: 15px 0 0 0;
+    -fx-border-color: -background-tertiary;
+    -fx-border-width: 1px 0 0 0;
+}
+
+/* ==========================================
+   DIVIDER
+   ========================================== */
+
+.divider {
+    -fx-background-color: -background-tertiary;
+    -fx-min-height: 1px;
+    -fx-max-height: 1px;
+}
+
+/* ==========================================
+   ANIMACIONES Y TRANSICIONES
+   ========================================== */
+
+.fade-in {
+    -fx-opacity: 0;
+}
+
+/* ==========================================
+   UTILIDADES
+   ========================================== */
+
+.text-center {
+    -fx-alignment: center;
+}
+
+.text-left {
+    -fx-alignment: center-left;
+}
+
+.text-right {
+    -fx-alignment: center-right;
+}
+
+.rounded {
+    -fx-background-radius: -radius-medium;
+}
+
+.rounded-full {
+    -fx-background-radius: -radius-round;
+}
+
+.shadow-light {
+    -fx-effect: -shadow-light;
+}
+
+.shadow-medium {
+    -fx-effect: -shadow-medium;
+}
+
+.shadow-strong {
+    -fx-effect: -shadow-strong;
+}
