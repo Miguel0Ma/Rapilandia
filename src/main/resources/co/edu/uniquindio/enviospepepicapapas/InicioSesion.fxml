@@ -2,44 +2,110 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
+<?import javafx.geometry.Insets?>
 <?import javafx.collections.FXCollections?>
 <?import java.lang.String?>
-<VBox xmlns="http://javafx.com/javafx"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="co.edu.uniquindio.enviospepepicapapas.Controllers.InicioSesionController"
-      prefHeight="400.0" prefWidth="600.0"
-      spacing="20.0"
-      alignment="CENTER">
+
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="co.edu.uniquindio.enviospepepicapapas.Controllers.InicioSesionController"
+           prefHeight="700.0" prefWidth="500.0"
+           style="-fx-background-color: #FF441F;">
 
     <children>
-        <Label text="Inicio de Sesión" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+        <!-- Contenedor principal con fondo blanco -->
+        <VBox alignment="CENTER" spacing="0" maxWidth="450.0" maxHeight="650.0"
+              style="-fx-background-color: white; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 20, 0, 0, 5);">
 
-        <VBox spacing="10.0" alignment="CENTER_LEFT">
-            <Label text="Tipo de Usuario:" />
-            <ComboBox fx:id="tipoUsuarioComboBox" prefWidth="200.0">
-                <items>
-                    <FXCollections fx:factory="observableArrayList">
-                        <String fx:value="Cliente" />
-                        <String fx:value="Repartidor" />
-                        <String fx:value="Administrador" />
-                    </FXCollections>
-                </items>
-            </ComboBox>
+            <padding>
+                <Insets top="50" right="40" bottom="50" left="40"/>
+            </padding>
+
+            <!-- Logo o Título -->
+            <VBox alignment="CENTER" spacing="10">
+                <Label text="🚚" style="-fx-font-size: 60px;" />
+                <Label text="Envíos Pepe Pica Papas"
+                       style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #FF441F;" />
+                <Label text="Bienvenido de nuevo"
+                       style="-fx-font-size: 16px; -fx-text-fill: #666666;" />
+            </VBox>
+
+            <!-- Espaciador -->
+            <Region VBox.vgrow="ALWAYS" minHeight="40" maxHeight="40"/>
+
+            <!-- Campo Tipo de Usuario -->
+            <VBox spacing="8">
+                <Label text="Tipo de usuario"
+                       style="-fx-font-size: 13px; -fx-text-fill: #333333; -fx-font-weight: 600;" />
+                <ComboBox fx:id="tipoUsuarioComboBox" prefWidth="370.0" prefHeight="50.0"
+                          promptText="Selecciona tu rol"
+                          style="-fx-background-color: #F8F8F8; -fx-background-radius: 12; -fx-border-color: transparent; -fx-font-size: 14px;">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Cliente" />
+                            <String fx:value="Repartidor" />
+                            <String fx:value="Administrador" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+            </VBox>
+
+            <!-- Espaciador -->
+            <Region minHeight="20"/>
+
+            <!-- Campo Correo -->
+            <VBox spacing="8">
+                <Label text="Correo electrónico"
+                       style="-fx-font-size: 13px; -fx-text-fill: #333333; -fx-font-weight: 600;" />
+                <TextField fx:id="correoTextField" prefHeight="50.0"
+                           promptText="tucorreo@ejemplo.com"
+                           style="-fx-background-color: #F8F8F8; -fx-background-radius: 12; -fx-border-color: transparent; -fx-font-size: 14px; -fx-padding: 0 15 0 15;" />
+            </VBox>
+
+            <!-- Espaciador -->
+            <Region minHeight="20"/>
+
+            <!-- Campo Contraseña -->
+            <VBox spacing="8">
+                <Label text="Contraseña"
+                       style="-fx-font-size: 13px; -fx-text-fill: #333333; -fx-font-weight: 600;" />
+                <PasswordField fx:id="contrasenaPasswordField" prefHeight="50.0"
+                               promptText="••••••••"
+                               style="-fx-background-color: #F8F8F8; -fx-background-radius: 12; -fx-border-color: transparent; -fx-font-size: 14px; -fx-padding: 0 15 0 15;" />
+            </VBox>
+
+            <!-- Espaciador -->
+            <Region minHeight="30"/>
+
+            <!-- Botón de Inicio de Sesión -->
+            <Button fx:id="iniciarSesionButton" text="Iniciar sesión"
+                    onAction="#iniciarSesion"
+                    prefHeight="55.0" maxWidth="Infinity"
+                    style="-fx-background-color: #FF441F; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 12; -fx-cursor: hand;">
+                <VBox.margin>
+                    <Insets top="0"/>
+                </VBox.margin>
+            </Button>
+
+            <!-- Espaciador -->
+            <Region minHeight="15"/>
+
+            <!-- Mensaje de error -->
+            <Label fx:id="mensajeLabel" text=""
+                   wrapText="true" alignment="CENTER" textAlignment="CENTER"
+                   style="-fx-text-fill: #FF441F; -fx-font-size: 13px; -fx-font-weight: 500;" />
+
+            <!-- Espaciador -->
+            <Region VBox.vgrow="ALWAYS" minHeight="20"/>
+
+            <!-- Link de registro o ayuda -->
+            <HBox alignment="CENTER" spacing="5">
+                <Label text="¿No tienes cuenta?"
+                       style="-fx-font-size: 13px; -fx-text-fill: #666666;" />
+                <Label text="Regístrate"
+                       style="-fx-font-size: 13px; -fx-text-fill: #FF441F; -fx-font-weight: bold; -fx-cursor: hand; -fx-underline: true;" />
+            </HBox>
+
         </VBox>
-
-        <VBox spacing="10.0" alignment="CENTER_LEFT">
-            <Label text="Correo:" />
-            <TextField fx:id="correoTextField" prefWidth="200.0" promptText="Ingrese su correo" />
-        </VBox>
-
-        <VBox spacing="10.0" alignment="CENTER_LEFT">
-            <Label text="Contraseña:" />
-            <PasswordField fx:id="contrasenaPasswordField" prefWidth="200.0" promptText="Ingrese su contraseña" />
-        </VBox>
-
-        <Button fx:id="iniciarSesionButton" text="Iniciar Sesión" onAction="#iniciarSesion" prefWidth="150.0" />
-
-        <Label fx:id="mensajeLabel" text="" style="-fx-text-fill: red;" />
     </children>
-</VBox>
+</StackPane>
