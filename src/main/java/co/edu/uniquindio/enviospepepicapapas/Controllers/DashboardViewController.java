@@ -4,9 +4,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -38,6 +40,9 @@ public class DashboardViewController {
 
     @FXML
     private Button btnUsuariosExistentes;
+
+    @FXML
+    private Button cerrarSesion;
 
     @FXML
     public void initialize() {
@@ -147,6 +152,20 @@ public class DashboardViewController {
             cargarVistaEnContenido("/co/edu/uniquindio/enviospepepicapapas/UsuariosExistentesView.fxml");
         } catch (IOException e) {
             mostrarError("Error al cargar vista", "No se pudo abrir la vista de usuarios existentes: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void onCerrarSesion(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/co/edu/uniquindio/enviospepepicapapas/InicioSesion.fxml"));
+            Parent root = loader.load();
+            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Rapilandia Express");
+        } catch (IOException e) {
+            mostrarError("Error al cerrar sesión", "No se pudo regresar a la pantalla de inicio de sesión: " + e.getMessage());
             e.printStackTrace();
         }
     }
