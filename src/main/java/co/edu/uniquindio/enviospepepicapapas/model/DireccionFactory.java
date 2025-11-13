@@ -5,9 +5,9 @@ public class DireccionFactory {
     public static Direccion crearDireccion(String tipo, String calle, String ciudad, String zona,String idDireccion) {
         switch (tipo) {
             case "Trabajo":
-                return new Direccion(idDireccion,"Residencial",calle,ciudad,zona);
+                return new Direccion(idDireccion,"Trabajo",calle,ciudad,zona);
             case "Residencial":
-                return new Direccion(idDireccion,"Ciudad",zona,calle,ciudad);
+                return new Direccion(idDireccion,"Residencial",zona,calle,ciudad);
             default:
                 return new Direccion(idDireccion,tipo,zona,calle,ciudad);
         }
@@ -15,6 +15,6 @@ public class DireccionFactory {
     }
 
     public static Direccion crearDireccionPorDefecto() {
-        return crearDireccion("Casa", "Calle Principal", "Bogotá", "Centro","2334");
+        return crearDireccion("Residencial", "Calle Principal", "Bogotá", "Centro","2334");
     }
 }

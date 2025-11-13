@@ -50,6 +50,8 @@
                 <Button fx:id="btnNotificaciones" onAction="#onNotificaciones" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: rgba(255,255,255,0.2); -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: 600; -fx-background-radius: 12; -fx-alignment: CENTER-LEFT; -fx-padding: 0 20;" text="📢  Notificaciones" />
 
                 <Button fx:id="btnUsuariosExistentes" onAction="#onUsuariosExistentes" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: rgba(255,255,255,0.2); -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: 600; -fx-background-radius: 12; -fx-alignment: CENTER-LEFT; -fx-padding: 0 20;" text="👥  Usuarios Existentes" />
+
+                <Button fx:id="btnIncidencias" onAction="#onIncidencias" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: rgba(255,255,255,0.2); -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: 600; -fx-background-radius: 12; -fx-alignment: CENTER-LEFT; -fx-padding: 0 20;" text="⚠️  Gestión de Incidencias" />
             </VBox>
 
             <!-- Spacer -->

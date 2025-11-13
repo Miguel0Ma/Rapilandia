@@ -3,12 +3,15 @@ package co.edu.uniquindio.enviospepepicapapas.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Rapilandia {
 
     private String nombreEmpresa;
     private List<Envio> envios;
     private List<Usuario> usuarios;
+    private List<Incidencia>incidencias;
     private TarifaManager tarifaManager;
     private HistorialEnvios historial;
 
@@ -16,6 +19,7 @@ public class Rapilandia {
         this.nombreEmpresa = nombreEmpresa;
         this.envios = new ArrayList<>();
         this.usuarios = new ArrayList<>();
+        this.incidencias = new ArrayList<>();
         this.tarifaManager = TarifaManager.getInstancia();
         this.historial = new HistorialEnvios();
     }
@@ -78,5 +82,42 @@ public class Rapilandia {
 
     public String getNombreEmpresa() {
         return nombreEmpresa;
+    }
+
+    public Incidencia registrarIncidencia(Envio envio, TipoIncidencia tipo,
+                                          String descripcion, String zona,
+                                          Usuario reportadoPor) {
+        int nuevoId = incidencias.size() + 1;
+        Incidencia incidencia = new Incidencia(
+                nuevoId, envio, tipo, descripcion, zona, reportadoPor
+        );
+        incidencias.add(incidencia);
+
+        System.out.println("⚠️ Incidencia registrada: " + incidencia.getResumen());
+
+        return incidencia;
+    }
+
+    public Map<String, Long> getIncidenciasPorZona() {
+        return incidencias.stream()
+                .collect(Collectors.groupingBy(
+                        Incidencia::getZona,
+                        Collectors.counting()
+                ));
+    }
+    public List<Incidencia> getIncidenciasPendientes() {
+        return incidencias.stream()
+                .filter(i -> i.getEstado() == EstadoIncidencia.PENDIENTE)
+                .collect(Collectors.toList());
+    }
+    public List<Incidencia> getIncidenciasCriticas() {
+        return incidencias.stream()
+                .filter(Incidencia::esCritica)
+                .filter(i -> i.getEstado() != EstadoIncidencia.RESUELTA)
+                .collect(Collectors.toList());
+    }
+
+    public List<Incidencia> getIncidencias() {
+        return incidencias;
     }
 }

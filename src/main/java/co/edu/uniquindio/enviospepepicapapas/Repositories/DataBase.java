@@ -10,6 +10,7 @@ public class DataBase {
     private ArrayList<Administrador> administradores;
     private ArrayList<Cliente> clientes;
     private ArrayList<Direccion> direcciones;
+    private ArrayList<Envio> envios;
 
     private DataBase() {
         CargarDatos();
@@ -33,6 +34,9 @@ public class DataBase {
     public ArrayList<Direccion> getDirecciones() {
         return direcciones;
     }
+    public ArrayList<Envio> getEnvios() {
+        return envios;
+    }
     public void CargarDatos(){
         repartidores = new ArrayList<>();
         repartidores.add(new Repartidor.Builder().nombre("Yulbreiner").email("yul@gmail.com").password("123").tipo("Repartidor").build());
@@ -43,6 +47,10 @@ public class DataBase {
         direcciones = new ArrayList<>();
         Direccion nuevaDireccion1 = DireccionFactory.crearDireccion("Residencial","Calle 11","Armenia","Centro","123");
         direcciones.add(nuevaDireccion1);
+        envios = new ArrayList<>();
+        Dimension dimensionEnvio = new Dimension(30.0, 20.0, 15.0); // alto, ancho, largo
+        Envio envioEjemplo = new Envio(1, "Armenia", 2.5, false, dimensionEnvio);
+        envios.add(envioEjemplo);
     }
     public void agregarDireccion(Direccion direccion){
         direcciones.add(direccion);

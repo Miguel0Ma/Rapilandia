@@ -29,6 +29,13 @@ public class DireccionesGuardadasController {
         }
     }
 
+    public void eliminarDireccion() {
+        int indice = listDirecciones.getSelectionModel().getSelectedIndex();
+        if (indice != -1) {
+            listDirecciones.getItems().remove(indice);
+        }
+    }
+
     @FXML
     private void onVolver(ActionEvent event) {
         // Lógica para regresar a la vista anterior

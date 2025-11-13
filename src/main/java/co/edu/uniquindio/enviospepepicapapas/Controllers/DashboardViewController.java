@@ -42,6 +42,9 @@ public class DashboardViewController {
     private Button btnUsuariosExistentes;
 
     @FXML
+    private Button btnIncidencias;
+
+    @FXML
     private Button cerrarSesion;
 
     @FXML
@@ -154,6 +157,16 @@ public class DashboardViewController {
             cargarVistaEnContenido("/co/edu/uniquindio/enviospepepicapapas/UsuariosExistentesView.fxml");
         } catch (IOException e) {
             mostrarError("Error al cargar vista", "No se pudo abrir la vista de usuarios existentes: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void onIncidencias(ActionEvent event) {
+        try {
+            cargarVistaEnContenido("/co/edu/uniquindio/enviospepepicapapas/IncidenciaView.fxml");
+        } catch (IOException e) {
+            mostrarError("Error al cargar vista", "No se pudo abrir la vista de incidencias: " + e.getMessage());
             e.printStackTrace();
         }
     }
