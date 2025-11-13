@@ -2,6 +2,7 @@ package co.edu.uniquindio.enviospepepicapapas.Repositories;
 
 import co.edu.uniquindio.enviospepepicapapas.model.Administrador;
 import co.edu.uniquindio.enviospepepicapapas.model.Cliente;
+import co.edu.uniquindio.enviospepepicapapas.model.Direccion;
 import co.edu.uniquindio.enviospepepicapapas.model.Repartidor;
 
 import java.util.ArrayList;
@@ -11,6 +12,7 @@ public class DataBase {
     private ArrayList<Repartidor> repartidores;
     private ArrayList<Administrador> administradores;
     private ArrayList<Cliente> clientes;
+    private ArrayList<Direccion> direcciones;
 
     private DataBase() {
         CargarDatos();
@@ -31,16 +33,23 @@ public class DataBase {
     public ArrayList<Cliente>getClientes(){
         return clientes;
     }
+    public ArrayList<Direccion> getDirecciones() {
+        return direcciones;
+    }
     public void CargarDatos(){
         repartidores = new ArrayList<>();
         repartidores.add(new Repartidor.Builder().nombre("Yulbreiner").email("yul@gmail.com").password("123").tipo("Repartidor").build());
         administradores = new ArrayList<>();
         administradores.add(new Administrador.Builder().nombre("Yulbreiner").email("yul@gmail.com").password("123").tipo("Administrador").build());
         clientes = new ArrayList<>();
-        clientes.add(new Cliente.Builder().email("yul@gmail.com").password("123").tipo("Cliente").build());
-
+        clientes.add(new Cliente.Builder().nombre("Juan Perez").email("yul@gmail.com").password("123").tipo("Cliente").build());
+        direcciones = new ArrayList<>();
+    }
+    public void agregarDireccion(Direccion direccion){
+        direcciones.add(direccion);
 
     }
+
 
 
 

@@ -11,7 +11,6 @@
     <top>
         <VBox style="-fx-background-color: #FFD700;">
             <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-padding: 20;">
-                <Button fx:id="btnVolver" onAction="#onVolver" style="-fx-background-color: #000000; -fx-text-fill: #FFD700; -fx-font-weight: bold; -fx-background-radius: 5;" text="← Volver" />
                 <Label style="-fx-text-fill: #000000; -fx-font-weight: bold;" text="REGISTRAR NUEVO ENVÍO">
                     <font>
                         <Font name="System Bold" size="24.0" />

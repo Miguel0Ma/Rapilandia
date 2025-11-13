@@ -9,14 +9,8 @@
 
     <top>
         <BorderPane style="-fx-background-color: #FFD700; -fx-padding: 20;">
-            <left>
-                <Button fx:id="btnVolver" onAction="#onVolver"
-                        text="Volver"
-                        style="-fx-background-color: #000000; -fx-text-fill: #FFD700; -fx-font-weight: bold; -fx-background-radius: 5;" />
-            </left>
             <center>
-                <Label text="RAPILANDIA EXPRESS"
-                       style="-fx-text-fill: #000000; -fx-font-weight: bold;">
+                <Label style="-fx-text-fill: #000000; -fx-font-weight: bold;" text="RAPILANDIA EXPRESS">
                     <font><Font name="System Bold" size="28.0" /></font>
                 </Label>
             </center>
@@ -43,9 +37,13 @@
                 <Label style="-fx-text-fill: #FFD700;" text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
                 <TextField fx:id="txtEmail" promptText="correo@dominio.com" style="-fx-background-radius: 8; -fx-text-fill: #FFD700; -fx-background-color: #1A1A1A; -fx-prompt-text-fill: #8c8c8c;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
-                <Label style="-fx-text-fill: #FFD700;" text="Tipo:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-                <ComboBox fx:id="cbTipo" promptText="Selecciona un tipo" style="-fx-background-radius: 8; -fx-background-color: #1A1A1A; -fx-mark-color: #FFD700; -fx-text-fill: #FFD700;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label style="-fx-text-fill: #FFD700;" text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <PasswordField fx:id="txtPassword" promptText="Contraseña" style="-fx-background-radius: 8; -fx-text-fill: #FFD700; -fx-background-color: #1A1A1A; -fx-prompt-text-fill: #8c8c8c;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label style="-fx-text-fill: #FFD700;" text="Tipo:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <ComboBox fx:id="cbTipo" promptText="Selecciona un tipo" style="-fx-background-radius: 8; -fx-background-color: #1A1A1A; -fx-mark-color: #FFD700; -fx-text-fill: #FFD700;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <rowConstraints>
+               <RowConstraints />
                <RowConstraints />
                <RowConstraints />
                <RowConstraints />

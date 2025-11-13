@@ -12,6 +12,27 @@ public class Cliente extends Usuario {
         this.password = builder.password;
     }
 
+    /**
+     * Agrega una dirección frecuente usando el Factory.
+     * @param tipo Tipo de dirección (ej. "Casa").
+     * @param calle Calle.
+     * @param ciudad Ciudad.
+     * @param zona Zona.
+     */
+    public void agregarDireccionFrecuente(String tipo, String calle, String ciudad, String zona, String id) {
+        Direccion nuevaDireccion = DireccionFactory.crearDireccion(tipo, calle, ciudad, zona,id);
+        agregarDireccion(nuevaDireccion);
+    }
+
+    /**
+     * Selecciona una dirección frecuente para un envío.
+     * @param idDireccion ID de la dirección.
+     * @return La dirección seleccionada o null si no existe.
+     */
+    public Direccion seleccionarDireccionFrecuente(String idDireccion) {
+        return buscarDireccion(idDireccion);
+    }
+
     public String getTipo() {
         return tipo;
     }

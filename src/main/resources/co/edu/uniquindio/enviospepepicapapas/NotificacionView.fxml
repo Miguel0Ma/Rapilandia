@@ -10,7 +10,6 @@
     <!-- Header -->
     <top>
         <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-background-color: #FFD700; -fx-padding: 15;">
-            <Button fx:id="btnVolver" onAction="#onVolver" style="-fx-background-color: #000000; -fx-text-fill: #FFD700; -fx-font-weight: bold; -fx-background-radius: 10;" text="Volver" />
             <Region HBox.hgrow="ALWAYS" />
             <Label style="-fx-text-fill: #000000; -fx-font-weight: bold;" text="RAPILANDIA EXPRESS">
                 <font><Font name="System Bold" size="26.0" /></font>

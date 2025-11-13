@@ -62,8 +62,20 @@
                         prefWidth="220.0" prefHeight="50.0" onAction="#onGestionUsuarios"
                         style="-fx-background-color: rgba(255,255,255,0.2); -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: 600; -fx-background-radius: 12; -fx-alignment: CENTER-LEFT; -fx-padding: 0 20;"/>
 
+                <Button fx:id="btnDirecciones" text="📍  Agregar Dirección"
+                        prefWidth="220.0" prefHeight="50.0" onAction="#onAgregarDireccion"
+                        style="-fx-background-color: rgba(255,255,255,0.2); -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: 600; -fx-background-radius: 12; -fx-alignment: CENTER-LEFT; -fx-padding: 0 20;"/>
+
+                <Button fx:id="btnDireccionesGuardadas" text="📍  Direcciones Guardadas"
+                        prefWidth="220.0" prefHeight="50.0" onAction="#onDireccionesGuardadas"
+                        style="-fx-background-color: rgba(255,255,255,0.2); -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: 600; -fx-background-radius: 12; -fx-alignment: CENTER-LEFT; -fx-padding: 0 20;"/>
+
                 <Button fx:id="btnNotificaciones" text="📢  Notificaciones"
                         prefWidth="220.0" prefHeight="50.0" onAction="#onNotificaciones"
+                        style="-fx-background-color: rgba(255,255,255,0.2); -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: 600; -fx-background-radius: 12; -fx-alignment: CENTER-LEFT; -fx-padding: 0 20;"/>
+
+                <Button fx:id="btnUsuariosExistentes" text="👥  Usuarios Existentes"
+                        prefWidth="220.0" prefHeight="50.0" onAction="#onUsuariosExistentes"
                         style="-fx-background-color: rgba(255,255,255,0.2); -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: 600; -fx-background-radius: 12; -fx-alignment: CENTER-LEFT; -fx-padding: 0 20;"/>
             </VBox>
 
