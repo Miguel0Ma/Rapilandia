@@ -56,14 +56,16 @@ public class DashboardViewController {
                 btnRegistrarEnvio.setVisible(false);
                 btnPagos.setVisible(false);
                 btnUsuarios.setVisible(false);
+                btnUsuariosExistentes.setVisible(false);
                 break;
             case "Cliente":
                 // Cliente puede ver: Registrar Envío, Historial de Envíos y Gestión de Pagos
                 btnUsuarios.setVisible(false);
                 btnNotificaciones.setVisible(false);
+                btnUsuariosExistentes.setVisible(false);
+                btnUsuarios.setVisible(false);
                 break;
             case "Administrador":
-                // Administrador ve todo
                 break;
             default:
                 // Por defecto, oculta funcionalidades administrativas

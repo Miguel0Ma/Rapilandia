@@ -53,9 +53,9 @@
     <!-- Footer -->
     <bottom>
         <HBox alignment="CENTER" spacing="10.0" style="-fx-background-color: #1A1A1A; -fx-padding: 15;">
-            <Label style="-fx-text-fill: #FFD700;" text="© 2024 Rapilandia Express" />
+            <Label style="-fx-text-fill: #FFD700;" />
             <Separator orientation="VERTICAL" prefHeight="20.0" />
-            <Label style="-fx-text-fill: #FFD700;" text="Notificación v1.2" />
+            <Label style="-fx-text-fill: #FFD700;" />
         </HBox>
     </bottom>
 

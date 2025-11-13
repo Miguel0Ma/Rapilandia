@@ -1,9 +1,6 @@
 package co.edu.uniquindio.enviospepepicapapas.Repositories;
 
-import co.edu.uniquindio.enviospepepicapapas.model.Administrador;
-import co.edu.uniquindio.enviospepepicapapas.model.Cliente;
-import co.edu.uniquindio.enviospepepicapapas.model.Direccion;
-import co.edu.uniquindio.enviospepepicapapas.model.Repartidor;
+import co.edu.uniquindio.enviospepepicapapas.model.*;
 
 import java.util.ArrayList;
 
@@ -44,6 +41,8 @@ public class DataBase {
         clientes = new ArrayList<>();
         clientes.add(new Cliente.Builder().nombre("Juan Perez").email("yul@gmail.com").password("123").tipo("Cliente").build());
         direcciones = new ArrayList<>();
+        Direccion nuevaDireccion1 = DireccionFactory.crearDireccion("Residencial","Calle 11","Armenia","Centro","123");
+        direcciones.add(nuevaDireccion1);
     }
     public void agregarDireccion(Direccion direccion){
         direcciones.add(direccion);

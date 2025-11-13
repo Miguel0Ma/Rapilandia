@@ -84,6 +84,7 @@ public class InicioSesionController {
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("/co/edu/uniquindio/enviospepepicapapas/DashboardView.fxml"));
                     Parent root = loader.load();
                     DashboardViewController controller = loader.getController();
+                    controller.setTipoUsuario(tipoUsuario);
                     Stage stage = (Stage) iniciarSesionButton.getScene().getWindow();
                     stage.setScene(new Scene(root));
                     stage.setTitle("Rapilandia Express - Dashboard");
@@ -100,6 +101,7 @@ public class InicioSesionController {
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("/co/edu/uniquindio/enviospepepicapapas/DashboardView.fxml"));
                     Parent root = loader.load();
                     DashboardViewController controller = loader.getController();
+                    controller.setTipoUsuario(tipoUsuario);
                     Stage stage = (Stage) iniciarSesionButton.getScene().getWindow();
                     stage.setScene(new Scene(root));
                     stage.setTitle("Rapilandia Express - Dashboard");
