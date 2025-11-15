@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="co.edu.uniquindio.enviospepepicapapas.Controllers.RegistroUsuarioController"
+      styleClass="content-area"
+      stylesheets="@Style/styledashboard.css"
+      spacing="20"
+      alignment="TOP_CENTER">
+
+    <padding>
+        <Insets top="30" right="30" bottom="30" left="30" />
+    </padding>
+
+    <!-- Título Principal -->
+    <VBox alignment="CENTER" spacing="10">
+        <Text text="Registro de Usuario" styleClass="title-primary"
+              style="-fx-font-size: 32px; -fx-fill: #FF441F; -fx-font-weight: bold;" />
+        <Text text="Complete el formulario para crear un nuevo Cliente o Repartidor"
+              styleClass="text-secondary"
+              style="-fx-font-size: 14px; -fx-fill: #666666;" />
+        <Separator prefWidth="500" />
+    </VBox>
+
+    <!-- Card contenedor del formulario -->
+    <VBox styleClass="content-card" spacing="20" maxWidth="600" alignment="TOP_LEFT">
+        <padding>
+            <Insets top="40" right="40" bottom="40" left="40" />
+        </padding>
+
+        <!-- Selector de Tipo de Usuario -->
+        <VBox spacing="8">
+            <Label text="Tipo de Usuario *"
+                   style="-fx-font-size: 14px; -fx-font-weight: 600; -fx-text-fill: #333333;" />
+            <ComboBox fx:id="tipoUsuarioComboBox"
+                      promptText="Seleccione el tipo de usuario"
+                      prefWidth="520"
+                      prefHeight="45"
+                      styleClass="combo-box" />
+        </VBox>
+
+        <!-- Campo ID (solo visible para Cliente) -->
+        <VBox fx:id="idContainer" spacing="8" managed="false" visible="false">
+            <Label text="ID de Usuario *"
+                   style="-fx-font-size: 14px; -fx-font-weight: 600; -fx-text-fill: #333333;" />
+            <TextField fx:id="idTextField"
+                       promptText="Ingrese ID único del usuario"
+                       styleClass="text-field"
+                       prefHeight="45" />
+        </VBox>
+
+        <!-- Campo Nombre -->
+        <VBox spacing="8">
+            <Label text="Nombre Completo *"
+                   style="-fx-font-size: 14px; -fx-font-weight: 600; -fx-text-fill: #333333;" />
+            <TextField fx:id="nombreTextField"
+                       promptText="Ingrese nombre completo"
+                       styleClass="text-field"
+                       prefHeight="45" />
+        </VBox>
+
+        <!-- Campo Email -->
+        <VBox spacing="8">
+            <Label text="Correo Electrónico *"
+                   style="-fx-font-size: 14px; -fx-font-weight: 600; -fx-text-fill: #333333;" />
+            <TextField fx:id="emailTextField"
+                       promptText="ejemplo@correo.com"
+                       styleClass="text-field"
+                       prefHeight="45" />
+        </VBox>
+
+        <!-- Campo Contraseña -->
+        <VBox spacing="8">
+            <Label text="Contraseña *"
+                   style="-fx-font-size: 14px; -fx-font-weight: 600; -fx-text-fill: #333333;" />
+            <PasswordField fx:id="passwordField"
+                           promptText="Ingrese contraseña segura (mínimo 6 caracteres)"
+                           styleClass="password-field"
+                           prefHeight="45" />
+        </VBox>
+
+        <!-- Campo Confirmar Contraseña -->
+        <VBox spacing="8">
+            <Label text="Confirmar Contraseña *"
+                   style="-fx-font-size: 14px; -fx-font-weight: 600; -fx-text-fill: #333333;" />
+            <PasswordField fx:id="confirmarPasswordField"
+                           promptText="Confirme la contraseña"
+                           styleClass="password-field"
+                           prefHeight="45" />
+        </VBox>
+
+        <!-- Label de mensajes -->
+        <Label fx:id="mensajeLabel"
+               wrapText="true"
+               textFill="#FF441F"
+               visible="false"
+               style="-fx-font-weight: bold; -fx-font-size: 14px;" />
+
+        <!-- Botones de Acción -->
+        <HBox spacing="15" alignment="CENTER">
+            <padding>
+                <Insets top="20" />
+            </padding>
+
+            <Button fx:id="registrarButton"
+                    text="Registrar Usuario"
+                    onAction="#registrarUsuario"
+                    styleClass="btn-primary"
+                    prefWidth="250"
+                    prefHeight="50"
+                    style="-fx-font-size: 15px; -fx-font-weight: bold;" />
+
+            <Button fx:id="limpiarButton"
+                    text="Limpiar Campos"
+                    onAction="#limpiarCampos"
+                    styleClass="btn-secondary"
+                    prefWidth="200"
+                    prefHeight="50"
+                    style="-fx-font-size: 15px; -fx-font-weight: 600;" />
+        </HBox>
+
+        <!-- Botón para volver al Login -->
+        <HBox alignment="CENTER" spacing="5">
+            <padding>
+                <Insets top="15" />
+            </padding>
+            <Label text="¿Ya tiene una cuenta?"
+                   style="-fx-text-fill: #666666; -fx-font-size: 13px;" />
+            <Button fx:id="volverLoginButton"
+                    text="Iniciar Sesión"
+                    onAction="#volverAlLogin"
+                    style="-fx-background-color: transparent; -fx-text-fill: #FF441F; -fx-font-weight: bold; -fx-underline: true; -fx-cursor: hand;"
+                    prefHeight="30" />
+        </HBox>
+
+    </VBox>
+
+</VBox>

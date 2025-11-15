@@ -1,117 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.geometry.Insets?>
-<?import javafx.collections.FXCollections?>
-<?import java.lang.String?>
 
-<StackPane xmlns="http://javafx.com/javafx"
-           xmlns:fx="http://javafx.com/fxml"
-           fx:controller="co.edu.uniquindio.enviospepepicapapas.Controllers.InicioSesionController"
-           prefHeight="700.0" prefWidth="500.0"
-           styleClass="main-background"
-          stylesheets="@Style/styleslogin.css">
+<StackPane prefHeight="700.0" prefWidth="500.0" styleClass="main-background" stylesheets="@Style/styleslogin.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.enviospepepicapapas.Controllers.InicioSesionController">
 
     <children>
         <!-- Contenedor principal con fondo blanco -->
-        <VBox alignment="CENTER" spacing="0" maxWidth="450.0" maxHeight="650.0"
-              styleClass="card-container">
+        <VBox alignment="CENTER" maxHeight="650.0" maxWidth="450.0" spacing="0" styleClass="card-container">
 
             <padding>
-                <Insets top="50" right="40" bottom="50" left="40"/>
+                <Insets bottom="50" left="40" right="40" top="50" />
             </padding>
 
             <!-- Logo o Título -->
             <VBox alignment="CENTER" spacing="10">
-                <Label text="🚚" style="-fx-font-size: 60px;" />
-                <Label text="Envíos Pepe Pica Papas"
-                       styleClass="title-secondary"
-                       style="-fx-text-fill: #FF441F;" />
-                <Label text="Bienvenido de nuevo"
-                       styleClass="text-secondary" />
+                <Label style="-fx-font-size: 60px;" text="🚚" />
+                <Label style="-fx-text-fill: #FF441F;" styleClass="title-secondary" text="Envíos Rapilandia" />
+                <Label styleClass="text-secondary" text="Bienvenido de nuevo" />
             </VBox>
 
             <!-- Espaciador -->
-            <Region VBox.vgrow="ALWAYS" minHeight="40" maxHeight="40"/>
+            <Region maxHeight="40" minHeight="40" VBox.vgrow="ALWAYS" />
 
             <!-- Campo Tipo de Usuario -->
             <VBox spacing="8">
-                <Label text="Tipo de usuario"
-                       styleClass="form-label" />
-                <ComboBox fx:id="tipoUsuarioComboBox"
-                          prefWidth="370.0"
-                          promptText="Selecciona tu rol">
-                    <items>
-                        <FXCollections fx:factory="observableArrayList">
-                            <String fx:value="Cliente" />
-                            <String fx:value="Repartidor" />
-                            <String fx:value="Administrador" />
-                        </FXCollections>
-                    </items>
+                <Label styleClass="form-label" text="Tipo de usuario" />
+                <ComboBox fx:id="tipoUsuarioComboBox" prefWidth="370.0" promptText="Selecciona tu rol">
                 </ComboBox>
             </VBox>
 
             <!-- Espaciador -->
-            <Region minHeight="20"/>
+            <Region minHeight="20" />
 
             <!-- Campo Correo -->
             <VBox spacing="8">
-                <Label text="Correo electrónico"
-                       styleClass="form-label" />
-                <TextField fx:id="correoTextField"
-                           promptText="tucorreo@ejemplo.com" />
+                <Label styleClass="form-label" text="Correo electrónico" />
+                <TextField fx:id="correoTextField" promptText="tucorreo@ejemplo.com" />
             </VBox>
 
             <!-- Espaciador -->
-            <Region minHeight="20"/>
+            <Region minHeight="20" />
 
             <!-- Campo Contraseña -->
             <VBox spacing="8">
-                <Label text="Contraseña"
-                       styleClass="form-label" />
-                <PasswordField fx:id="contrasenaPasswordField"
-                               promptText="••••••••" />
+                <Label styleClass="form-label" text="Contraseña" />
+                <PasswordField fx:id="contrasenaPasswordField" promptText="••••••••" />
             </VBox>
 
-
-
-
-
             <!-- Espaciador -->
-            <Region minHeight="30"/>
+            <Region minHeight="30" />
 
             <!-- Botón de Inicio de Sesión -->
-            <Button fx:id="iniciarSesionButton"
-                    text="Iniciar sesión"
-                    onAction="#iniciarSesion"
-                    styleClass="btn-primary"
-                    maxWidth="Infinity">
+            <Button fx:id="iniciarSesionButton" maxWidth="Infinity" onAction="#iniciarSesion" styleClass="btn-primary" text="Iniciar sesión">
                 <VBox.margin>
-                    <Insets top="0"/>
+                    <Insets top="0" />
                 </VBox.margin>
             </Button>
 
             <!-- Espaciador -->
-            <Region minHeight="15"/>
+            <Region minHeight="15" />
 
             <!-- Mensaje de error -->
-            <Label fx:id="mensajeLabel"
-                   text=""
-                   wrapText="true"
-                   alignment="CENTER"
-                   textAlignment="CENTER"
-                   styleClass="text-error" />
+            <Label fx:id="mensajeLabel" alignment="CENTER" styleClass="text-error" text="" textAlignment="CENTER" wrapText="true" />
 
             <!-- Espaciador -->
-            <Region VBox.vgrow="ALWAYS" minHeight="20"/>
+            <Region minHeight="20" VBox.vgrow="ALWAYS" />
 
             <!-- Link de registro o ayuda -->
             <HBox alignment="CENTER" spacing="5">
-                <Label text="¿No tienes cuenta?"
-                       styleClass="text-secondary" />
-                <Label text="Regístrate"
-                       styleClass="link" />
+                <Label styleClass="text-secondary" text="¿No tienes cuenta?" />
+                <Button fx:id="registrarseButton" onAction="#irARegistro" style="-fx-background-color: transparent; -fx-cursor: hand;" styleClass="link" text="Regístrate" />
             </HBox>
 
         </VBox>

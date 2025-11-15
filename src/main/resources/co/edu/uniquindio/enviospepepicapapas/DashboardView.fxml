@@ -10,8 +10,8 @@
         <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-background-color: white; -fx-padding: 20 30; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);">
             <Label style="-fx-font-size: 32px;" text="🚚" />
             <VBox spacing="2">
-                <Label style="-fx-text-fill: #FF441F;" styleClass="title-secondary" text="Envíos Pepe Pica Papas" />
-                <Label style="-fx-font-size: 13px;" styleClass="text-secondary" text="Panel de Administración" />
+                <Label style="-fx-text-fill: #FF441F;" styleClass="title-secondary" text="Envíos Rapilandia" />
+                <Label style="-fx-font-size: 13px;" styleClass="text-secondary" />
             </VBox>
 
             <!-- Spacer -->
@@ -19,10 +19,6 @@
 
             <!-- User info -->
             <HBox alignment="CENTER_RIGHT" spacing="10">
-                <VBox alignment="CENTER_RIGHT" spacing="2">
-                    <Label styleClass="form-label" text="Admin" />
-                    <Label styleClass="text-small" text="admin@pepepicapapas.com" />
-                </VBox>
                 <Button style="-fx-font-size: 18px; -fx-min-width: 45px; -fx-min-height: 45px;" styleClass="btn-icon" text="👤" />
             </HBox>
         </HBox>
@@ -75,25 +71,7 @@
                     </VBox>
 
                     <!-- Quick stats cards -->
-                    <HBox alignment="CENTER" spacing="20">
-                        <VBox alignment="CENTER" spacing="10" style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 25; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 15, 0, 0, 3); -fx-pref-width: 160;">
-                            <Label style="-fx-font-size: 35px;" text="📦" />
-                            <Label style="-fx-text-fill: #FF441F;" styleClass="title-secondary" text="128" />
-                            <Label styleClass="text-small" text="Envíos Activos" />
-                        </VBox>
-
-                        <VBox alignment="CENTER" spacing="10" style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 25; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 15, 0, 0, 3); -fx-pref-width: 160;">
-                            <Label style="-fx-font-size: 35px;" text="✅" />
-                            <Label style="-fx-text-fill: #00D632;" styleClass="title-secondary" text="452" />
-                            <Label styleClass="text-small" text="Completados" />
-                        </VBox>
-
-                        <VBox alignment="CENTER" spacing="10" style="-fx-background-color: white; -fx-background-radius: 15; -fx-padding: 25; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 15, 0, 0, 3); -fx-pref-width: 160;">
-                            <Label style="-fx-font-size: 35px;" text="👥" />
-                            <Label style="-fx-text-fill: #4A90E2;" styleClass="title-secondary" text="89" />
-                            <Label styleClass="text-small" text="Usuarios" />
-                        </VBox>
-                    </HBox>
+                    <HBox alignment="CENTER" spacing="20" />
                 </VBox>
             </center>
         </BorderPane>

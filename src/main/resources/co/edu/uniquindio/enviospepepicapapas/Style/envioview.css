@@ -1,0 +1,211 @@
+/* ==========================================
+   ESTILOS PARA VISTA DE ENVÍO
+   Rapilandia Express - Estilo Rappi
+   ========================================== */
+
+/* Contenedor principal */
+.envio-container {
+    -fx-background-color: #F8F8F8;
+}
+
+/* Header */
+.header-envio {
+    -fx-padding: 10px;
+}
+
+.emoji-icon {
+    -fx-font-size: 36px;
+}
+
+.title-envio {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FF441F;
+}
+
+.subtitle-envio {
+    -fx-font-size: 13px;
+    -fx-text-fill: #666666;
+}
+
+/* Separador */
+.separator-envio {
+    -fx-background-color: #E0E0E0;
+}
+
+/* ScrollPane */
+.scroll-envio {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+}
+
+/* Cards */
+.card-envio {
+    -fx-background-color: white;
+    -fx-background-radius: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+}
+
+/* Títulos de sección */
+.section-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FF441F;
+}
+
+/* Labels */
+.label-envio {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+/* TextFields */
+.textfield-envio {
+    -fx-background-color: white;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 15px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+    -fx-prompt-text-fill: #999999;
+    -fx-pref-height: 40px;
+}
+
+.textfield-envio:focused {
+    -fx-border-color: #FF441F;
+    -fx-border-width: 2px;
+}
+
+/* ComboBox */
+.combobox-envio {
+    -fx-background-color: white;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-pref-height: 40px;
+}
+
+.combobox-envio:focused {
+    -fx-border-color: #FF441F;
+    -fx-border-width: 2px;
+}
+
+/* CheckBox */
+.checkbox-envio {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+.checkbox-envio .box {
+    -fx-background-color: white;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 4px;
+}
+
+.checkbox-envio:selected .box {
+    -fx-background-color: #FF441F;
+    -fx-border-color: #FF441F;
+}
+
+.checkbox-envio:selected .mark {
+    -fx-background-color: white;
+}
+
+/* Box de Volumen */
+.volumen-box {
+    -fx-background-color: #FFF3E0;
+    -fx-padding: 12px;
+    -fx-background-radius: 8px;
+}
+
+.volumen-label {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+.volumen-value {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FF441F;
+}
+
+/* Box de Costo Total */
+.costo-box {
+    -fx-background-color: #FF441F;
+    -fx-padding: 25px;
+    -fx-background-radius: 10px;
+}
+
+.costo-title {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.costo-symbol {
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.costo-value {
+    -fx-text-fill: white;
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+}
+
+.costo-currency {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+
+/* Botones */
+.button-container {
+    -fx-padding: 10px;
+}
+
+.btn-calcular, .btn-registrar {
+    -fx-background-color: #FF441F;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+    -fx-padding: 12px 30px;
+    -fx-pref-width: 200px;
+    -fx-pref-height: 45px;
+}
+
+.btn-calcular:hover, .btn-registrar:hover {
+    -fx-background-color: #E63900;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.btn-limpiar {
+    -fx-background-color: white;
+    -fx-text-fill: #FF441F;
+    -fx-font-size: 15px;
+    -fx-font-weight: 600;
+    -fx-background-radius: 10px;
+    -fx-border-color: #FF441F;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-cursor: hand;
+    -fx-padding: 12px 30px;
+    -fx-pref-width: 140px;
+    -fx-pref-height: 45px;
+}
+
+.btn-limpiar:hover {
+    -fx-background-color: #FFF3E0;
+}
+
+/* Label de mensajes */
+.mensaje-label {
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-padding: 10px;
+}

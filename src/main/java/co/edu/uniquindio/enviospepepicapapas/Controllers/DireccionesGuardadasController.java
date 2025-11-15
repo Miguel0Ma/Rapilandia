@@ -41,4 +41,5 @@ public class DireccionesGuardadasController {
         // Lógica para regresar a la vista anterior
         // Por ejemplo: cambiar de escena o cerrar la ventana
     }
+
 }
