@@ -24,25 +24,24 @@
 
     <Separator prefWidth="700" />
 
-    <!-- Card contenedor del ListView -->
+
     <VBox maxWidth="750" spacing="20" styleClass="content-card" VBox.vgrow="ALWAYS">
         <padding>
             <Insets bottom="30" left="30" right="30" top="30" />
         </padding>
 
-        <!-- Instrucciones -->
+
         <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: #FFF3E0; -fx-padding: 15px; -fx-background-radius: 8px;">
             <Label style="-fx-font-size: 20px;" text="ℹ️" />
             <Label styleClass="text-secondary" text="Seleccione una dirección de la lista para eliminarla" wrapText="true" />
         </HBox>
 
-        <!-- ListView de direcciones -->
         <ListView fx:id="listDirecciones" prefHeight="350" prefWidth="690" style="-fx-background-color: white; -fx-border-color: #E0E0E0; -fx-border-radius: 8px; -fx-background-radius: 8px;" />
 
-        <!-- Label para mensajes -->
+
         <Label fx:id="mensajeLabel" style="-fx-font-weight: bold; -fx-font-size: 14px;" visible="false" wrapText="true" />
 
-        <!-- Botones de acción -->
+
         <HBox alignment="CENTER" spacing="15">
             <VBox.margin>
                 <Insets top="10" />
@@ -52,7 +51,7 @@
         </HBox>
     </VBox>
 
-    <!-- Footer con información -->
+
     <HBox alignment="CENTER" spacing="10">
         <VBox.margin>
             <Insets top="20" />
