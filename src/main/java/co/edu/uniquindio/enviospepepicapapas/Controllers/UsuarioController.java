@@ -41,7 +41,7 @@ public class UsuarioController {
         cbTipo.getItems().addAll("Cliente", "Repartidor", "Administrador");
     }
 
-    // 🔹 Guardar usuario nuevo
+    // Guardar usuario nuevo
     @FXML
     private void onGuardar() {
         String nombre = txtNombre.getText();
@@ -95,7 +95,7 @@ public class UsuarioController {
         }
     }
 
-    // 🔹 Duplicar usuario (usa Prototype)
+    // Duplicar usuario (usa Prototype)
     @FXML
     private void onDuplicarUsuario() {
         if (usuarioSeleccionado == null) {
@@ -114,7 +114,7 @@ public class UsuarioController {
         mostrarAlerta("Duplicación exitosa", "Usuario duplicado con éxito usando Prototype.", Alert.AlertType.INFORMATION);
     }
 
-    // 🔹 Cancelar acción
+    //  Cancelar acción
     @FXML
     private void onCancelar() {
         limpiarCampos();
@@ -123,7 +123,7 @@ public class UsuarioController {
 
 
 
-    // 🔸 Métodos auxiliares
+    // Métodos auxiliares
 
     private void limpiarCampos() {
         txtNombre.clear();
@@ -132,11 +132,7 @@ public class UsuarioController {
         cbTipo.setValue(null);
         usuarioSeleccionado = null;
     }
-    @FXML
-    public void onVolver(ActionEvent event) {
-        Stage stage = (Stage) btnVolver.getScene().getWindow();
-        stage.close();
-    }
+
 
     private void mostrarAlerta(String titulo, String mensaje, Alert.AlertType tipo) {
         Alert alerta = new Alert(tipo);

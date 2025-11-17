@@ -38,8 +38,7 @@ public class DireccionesGuardadasController {
 
     @FXML
     private void onVolver(ActionEvent event) {
-        // Lógica para regresar a la vista anterior
-        // Por ejemplo: cambiar de escena o cerrar la ventana
+
     }
 
 }

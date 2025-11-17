@@ -107,7 +107,7 @@ public class IncidenciaController {
             return;
         }
 
-        // Crear nueva incidencia usando el método de Rapilandia
+        // Crear nueva incidencia
         Incidencia nuevaIncidencia = empresa.registrarIncidencia(envioSeleccionado,
                 tipoSeleccionado, descripcion, zona, usuarioActual);
 

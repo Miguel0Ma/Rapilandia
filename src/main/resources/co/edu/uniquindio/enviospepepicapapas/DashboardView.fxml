@@ -5,7 +5,7 @@
 
 <BorderPane prefHeight="700.0" prefWidth="1200.0" styleClass="dashboard-container" stylesheets="@Style/styledashboard.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.enviospepepicapapas.Controllers.DashboardViewController">
 
-    <!-- Header -->
+
     <top>
         <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-background-color: white; -fx-padding: 20 30; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);">
             <Label style="-fx-font-size: 32px;" text="🚚" />
@@ -14,17 +14,17 @@
                 <Label style="-fx-font-size: 13px;" styleClass="text-secondary" />
             </VBox>
 
-            <!-- Spacer -->
+
             <Region HBox.hgrow="ALWAYS" />
 
-            <!-- User info -->
+
             <HBox alignment="CENTER_RIGHT" spacing="10">
                 <Button style="-fx-font-size: 18px; -fx-min-width: 45px; -fx-min-height: 45px;" styleClass="btn-icon" text="👤" />
             </HBox>
         </HBox>
     </top>
 
-    <!-- Left Sidebar -->
+
     <left>
         <VBox spacing="10.0" style="-fx-background-color: #FF441F; -fx-padding: 30 20; -fx-pref-width: 260;">
 
@@ -50,18 +50,17 @@
                 <Button fx:id="btnIncidencias" onAction="#onIncidencias" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: rgba(255,255,255,0.2); -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: 600; -fx-background-radius: 12; -fx-alignment: CENTER-LEFT; -fx-padding: 0 20;" text="⚠️  Gestión de Incidencias" />
             </VBox>
 
-            <!-- Spacer -->
+
             <Region VBox.vgrow="ALWAYS" />
 
-            <!-- Logout button at bottom -->
+            
             <Button fx:id="cerrarSesion" onAction="#onCerrarSesion" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: rgba(255,255,255,0.15); -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: 600; -fx-background-radius: 12; -fx-alignment: CENTER-LEFT; -fx-padding: 0 20; -fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 12;" text="🚪  Cerrar Sesión" />
         </VBox>
     </left>
 
-    <!-- Center Content Area -->
     <center>
         <BorderPane fx:id="contentPane" style="-fx-background-color: #F8F8F8; -fx-padding: 30;">
-            <!-- Default welcome content -->
+
             <center>
                 <VBox alignment="CENTER" maxWidth="600" spacing="30.0">
                     <VBox alignment="CENTER" spacing="15">
@@ -77,7 +76,7 @@
         </BorderPane>
     </center>
 
-    <!-- Footer -->
+
     <bottom>
         <HBox alignment="CENTER" spacing="15.0" style="-fx-background-color: white; -fx-padding: 15; -fx-border-color: #E0E0E0; -fx-border-width: 1 0 0 0;">
             <Label style="-fx-text-fill: #666666;" styleClass="text-small" />

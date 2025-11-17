@@ -38,7 +38,7 @@ public class HistorialEnvioController {    @FXML private TableView<Envio> tablaE
         // Estados disponibles
         cbEstado.setItems(FXCollections.observableArrayList(EstadoEnvio.values()));
 
-        // Datos de ejemplo (puedes quitarlos cuando conectes con Rapilandia real)
+        // Datos de ejemplo
         cargarEnviosEjemplo();
 
         // Selección
@@ -70,7 +70,7 @@ public class HistorialEnvioController {    @FXML private TableView<Envio> tablaE
         tablaEnvios.setItems(listaEnvios);
     }
 
-    // 🔹 Acción: actualizar estado
+    // actualizar estado
     @FXML
     public void onActualizarEstado(ActionEvent event) {
         Envio seleccionado = tablaEnvios.getSelectionModel().getSelectedItem();
@@ -96,7 +96,7 @@ public class HistorialEnvioController {    @FXML private TableView<Envio> tablaE
         tablaEnvios.refresh();
     }
 
-    // 🔹 Acción: ver detalle del envío
+    //   ver detalle del envío
     @FXML
     public void onVerDetalle(ActionEvent event) {
         Envio envio = tablaEnvios.getSelectionModel().getSelectedItem();
@@ -114,14 +114,14 @@ public class HistorialEnvioController {    @FXML private TableView<Envio> tablaE
         mostrarAlerta("Detalle de envío", info, Alert.AlertType.INFORMATION);
     }
 
-    // 🔹 Acción: volver al menú principal
+    //   volver al menú principal
     @FXML
     public void onVolverMenu(ActionEvent event) {
         Stage stage = (Stage) tablaEnvios.getScene().getWindow();
         stage.close();
     }
 
-    // 🔸 Utilidades
+
     private void mostrarAlerta(String titulo, String mensaje, Alert.AlertType tipo) {
         Alert alerta = new Alert(tipo);
         alerta.setTitle(titulo);

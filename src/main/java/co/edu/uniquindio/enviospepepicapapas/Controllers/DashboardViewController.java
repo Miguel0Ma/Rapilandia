@@ -55,14 +55,14 @@ public class DashboardViewController {
     public void setTipoUsuario(String tipoUsuario) {
         switch (tipoUsuario) {
             case "Repartidor":
-                // Repartidor puede ver: Historial de Envíos y Notificaciones
+                // Repartidor
                 btnRegistrarEnvio.setVisible(false);
                 btnPagos.setVisible(false);
                 btnUsuarios.setVisible(false);
                 btnUsuariosExistentes.setVisible(false);
                 break;
             case "Cliente":
-                // Cliente puede ver: Registrar Envío, Historial de Envíos y Gestión de Pagos
+                // Cliente
                 btnUsuarios.setVisible(false);
                 btnNotificaciones.setVisible(false);
                 btnUsuariosExistentes.setVisible(false);
@@ -71,7 +71,7 @@ public class DashboardViewController {
             case "Administrador":
                 break;
             default:
-                // Por defecto, oculta funcionalidades administrativas
+                // Por defecto
                 btnUsuarios.setVisible(false);
                 btnNotificaciones.setVisible(false);
                 break;

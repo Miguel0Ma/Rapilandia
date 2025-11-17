@@ -38,7 +38,7 @@ public class AgregarDireccionController {
     private void onGuardar(ActionEvent event) {
         if (validarCampos()) {
             try {
-                // Crear objeto Direccion usando el Factory Pattern
+                // Crear objeto Direccion usando el Factory
                 Direccion nuevaDireccion = DireccionFactory.crearDireccion(
                     cbTipo.getValue(),
                     txtCalle.getText().trim(),
@@ -65,7 +65,7 @@ public class AgregarDireccionController {
     @FXML
     private void onCancelar(ActionEvent event) {
         limpiarCampos();
-        // Aquí se puede agregar lógica para cerrar la ventana o regresar a la vista anterior
+
     }
 
 

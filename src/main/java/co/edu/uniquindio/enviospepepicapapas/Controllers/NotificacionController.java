@@ -24,7 +24,7 @@ public class NotificacionController {
         cbCanal.setItems(FXCollections.observableArrayList("Email", "SMS"));
     }
 
-    // 🔹 Enviar notificación
+    // Enviar notificación
     @FXML
     private void onEnviar() {
         String mensaje = txtMensaje.getText();
@@ -51,15 +51,10 @@ public class NotificacionController {
         lblResultado.setText("✅ Estado: Notificación enviada por " + canalSeleccionado);
     }
 
-    // 🔹 Volver al menú o cerrar ventana
-    @FXML
-    public void onVolver(ActionEvent event) {
-        Stage stage = (Stage) btnVolver.getScene().getWindow();
-        stage.close();
-    }
 
 
-    // 🔸 Mostrar alertas genéricas
+
+    // Mostrar alertas genéricas
     private void mostrarAlerta(String titulo, String mensaje, Alert.AlertType tipo) {
         Alert alert = new Alert(tipo);
         alert.setTitle(titulo);

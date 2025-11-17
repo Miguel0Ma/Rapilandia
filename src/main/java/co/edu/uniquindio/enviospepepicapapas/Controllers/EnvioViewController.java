@@ -34,7 +34,7 @@ public class EnvioViewController {
         cmbEstrategia.getItems().addAll("Por Peso", "Por Volumen");
         cmbEstrategia.setValue("Por Peso");
 
-        // Listeners para calcular volumen automáticamente
+        //  calcular volumen automáticamente
         if (txtAlto != null) {
             txtAlto.textProperty().addListener((obs, old, newVal) -> calcularVolumen());
         }

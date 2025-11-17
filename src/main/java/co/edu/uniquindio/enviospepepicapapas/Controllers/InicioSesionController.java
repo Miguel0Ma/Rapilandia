@@ -111,7 +111,7 @@ public class InicioSesionController {
         }
     }
 
-    // Método auxiliar para abrir el dashboard (evita duplicación de código)
+
     private void abrirDashboard(String tipoUsuario) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/co/edu/uniquindio/enviospepepicapapas/DashboardView.fxml"));
